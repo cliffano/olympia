@@ -1,0 +1,29 @@
+{
+  "options": [
+    {
+      "arg": "-c, --config-file <configFile>",
+      "desc": "Configuration file, default: typescriptcli.yaml"
+    }
+  ],
+  "commands": {
+    "display": {
+      "desc": "Display message",
+      "options": [
+        {
+          "arg": "-r, --reverse",
+          "desc": "Write the message text in reverse"
+        },
+        {
+          "arg": "-t, --transform <transform>",
+          "desc": "Message text transformation type, default: lower",
+          "choices": ["lower", "upper"]
+        }
+      ],
+      "examples": [
+        "typescriptcli display",
+        "typescriptcli display --reverse",
+        "typescriptcli display --reverse --transform upper"
+      ]
+    }
+  }
+}

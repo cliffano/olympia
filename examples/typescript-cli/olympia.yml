@@ -1,0 +1,15 @@
+---
+package_name: typescriptcli
+author: Pakkun
+generator:
+  component: typescript-cli
+  inputs:
+    project_id: typescriptcli
+    project_name: TypeScriptCLI
+    project_desc: A sample TypeScript CLI project
+    author_name: Pakkun
+    author_email: blah+pakkun@cliffano.com
+    author_url: https://github.com/pakkunbot
+    github_id: pakkunbot
+    github_repo: typescript-cli
+    github_token_prefix: STUDIO

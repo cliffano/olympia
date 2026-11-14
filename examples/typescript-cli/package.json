@@ -1,0 +1,94 @@
+{
+  "name": "typescriptcli",
+  "type": "module",
+  "description": "A sample TypeScript CLI project",
+  "keywords": [],
+  "version": "0.9.0-pre.0",
+  "homepage": "https://github.com/pakkunbot/typescript-cli",
+  "author": "Pakkun <blah+pakkun@cliffano.com> (https://github.com/pakkunbot)",
+  "contributors": [
+    "All contributors (https://github.com/pakkunbot/typescript-cli/graphs/contributors)"
+  ],
+  "main": "./dist/typescriptcli.js",
+  "types": "./dist/typescriptcli.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/typescriptcli.d.ts",
+      "default": "./dist/typescriptcli.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "typescriptcli": "bin/typescriptcli.js"
+  },
+  "files": [
+    "bin",
+    "conf",
+    "dist",
+    "examples",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pakkunbot/typescript-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pakkunbot/typescript-cli/issues"
+  },
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "scripts": {
+    "prepare": "tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "bagofcli": "4.0.0",
+    "yaml": "2.9.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@sinonjs/referee": "11.0.2",
+    "@types/mocha": "10.0.10",
+    "@types/node": "26.6.6",
+    "@types/sinon": "22.0.2",
+    "c8": "12.0.0",
+    "eslint": "10.14.0",
+    "mocha": "12.0.3",
+    "mochawesome": "8.1.1",
+    "npm-check-updates": "23.1.1",
+    "prettier": "3.9.10",
+    "sinon": "22.1.0",
+    "tsx": "4.23.15",
+    "typedoc": "0.28.20",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1"
+  },
+  "engines": {
+    "node": ">= 22.0.0"
+  },
+  "license": "MIT",
+  "mocha": {
+    "node-option": [
+      "import=tsx",
+      "no-experimental-require-module"
+    ],
+    "extension": [
+      "ts"
+    ],
+    "spec": [
+      "test/**/*.ts"
+    ],
+    "ignore": [
+      "test/fixtures/**",
+      "test/helpers/**",
+      "test/**/*.d.ts"
+    ],
+    "recursive": true,
+    "timeout": 15000
+  }
+}

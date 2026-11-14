@@ -1,0 +1,15 @@
+{
+  "resources": [
+    {
+      "path": "src/Makefile-olympia",
+      "type": "makefile",
+      "params": {
+        "variable": "OLYMPIA_VERSION"
+      }
+    },
+    {
+      "path": "CHANGELOG.md",
+      "type": "keep-a-changelog"
+    }
+  ]
+}

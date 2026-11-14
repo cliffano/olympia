@@ -1,0 +1,41 @@
+import js from "@eslint/js";
+import { defineConfig } from "eslint/config";
+import tseslint from "typescript-eslint";
+
+const nodeGlobals = {
+  console: "readonly",
+  process: "readonly",
+  Buffer: "readonly",
+  URL: "readonly",
+  setTimeout: "readonly",
+  clearTimeout: "readonly",
+};
+
+export default defineConfig([
+  {
+    ignores: [
+      "coverage/",
+      "dist/",
+      "node_modules/",
+      "stage/",
+      "test/fixtures/",
+    ],
+  },
+  js.configs.recommended,
+  tseslint.configs.recommended,
+  {
+    rules: {
+      semi: "error",
+      "prefer-const": "error",
+    },
+  },
+  {
+    // The limit `make complexity` reports against (COMPLEXITY_MAX).
+    files: ["lib/**/*.ts"],
+    rules: { complexity: ["error", 10] },
+  },
+  {
+    files: ["bin/**/*.js", "eslint.config.js"],
+    languageOptions: { globals: nodeGlobals },
+  },
+]);
