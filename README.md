@@ -4,6 +4,7 @@
 
 <!-- BEGIN:BADGES -->
 [![Build Status](https://github.com/cliffano/olympia/actions/workflows/ci-workflow.yaml/badge.svg)](https://github.com/cliffano/olympia/actions/workflows/ci-workflow.yaml)
+[![Code Scanning Status](https://github.com/cliffano/olympia/workflows/CodeQL/badge.svg)](https://github.com/cliffano/olympia/actions?query=workflow%3ACodeQL)
 <!-- END:BADGES -->
 
 # Olympia
